@@ -1,54 +1,118 @@
-import 'package:flutter/material.dart';
-import 'package:to_do_work/main.dart';
-void main(){
-  runApp(MyApp());
-}
+//  import 'package:flutter/material.dart';
 
-class Homescreen extends StatelessWidget {
+// void main() {
+//   runApp(
+//     const MaterialApp(
+//      debugShowCheckedModeBanner: false,
+//      home: Homescreen(),
+//    ),
+//   );
+//  }
+
+//  class Homescreen extends StatelessWidget {
+//   const Homescreen({super.key});
+//    @override
+//    Widget build(BuildContext context) {
+//      return Scaffold(       body: Stack(
+//         children: [
+          
+
+//          Center(
+//   child: SizedBox(
+//     width: 1200,
+//      height: 675,
+//      child: Stack(
+//      children: [
+
+//        Positioned.fill(
+//          child: Image.asset(
+//           'assets/coffee.png',
+//            fit: BoxFit.fill,
+//            ),
+//        ),
+
+// Positioned(
+//           top: 108,
+//  left: 748,
+//  width: 335,
+// height: 390,
+//           child: SizedBox(
+//            width: 320,
+//            child: Text(
+//              "WELCOME TO\n\nCoffee House\n\nMore than just coffee\n\nWe serve carefully crafted coffee\nmade from the finest beans,\nwith passion, comfort and\na place to feel at home.",
+//            textAlign: TextAlign.center,
+//            ),
+//         ),
+//         ),
+
+//      ],
+//    ),
+//   ),
+//  )
+//        ],
+//      ),
+//  ),
+//      ],
+// // //     ),
+// // //   );
+// // //   }
+// // // }
+// // // // 
+import 'package:flutter/material.dart';
+import 'LoginPage.dart';
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: 
-     Scaffold(
-      body: Center(
-        child: Stack(
-          children: [
-            Image.asset(
-              ' assets/coffe.png',
-              width: 900,
-              fit: BoxFit.contain,
-            ),
+    return Scaffold(
+    body: SafeArea(child:SingleChildScrollView(
 
-            // Heading
-            Positioned(
-              top: 80,
-              left: 100,
-              child: Text(
-                "WELCOME TO",
-                style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.brown,
-                ),
-              ),
-            ),
-
-            // Dynamic Data
-            Positioned(
-              top: 180,
-              right: 120,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text("Espresso - \$5"),
-                  Text("Latte - \$6"),
-                  Text("Cappuccino - \$7"),
-                ],
-              ),
-            ),
-          ],
-        ),
+        child: SizedBox(
+          width: 1400,
+          height: 800,
+          child: Stack(
+            children: [
+              Container( 
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/image.png"), 
+            fit: BoxFit.cover, ), // DecorationImage
+        ), ), SizedBox(height: 25),
+// CONTINUE BUTTON - Right wale box ke neeche center
+Positioned(
+  right: 85,        // box jahan hai usi line me
+  bottom: 85,       // neeche se thora upar
+  width: 300,       // box ki width ke barabar
+  child: Center(
+    child: ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Colors.black, // image me black button hai
+        
+          
+        
       ),
-     ), );
+      onPressed: () {
+        // Yahan next page pe jao
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => LoginPage()),
+        );
+      },
+      child: Text(
+        "Continue",
+        style: TextStyle(
+          color: Colors.white,
+          fontSize: 15,
+          fontWeight: FontWeight.bold,
+          
+      ),
+    ),
+  ),
+)
+              ),
+                  ]),),
+    )),);
   }
 }
+

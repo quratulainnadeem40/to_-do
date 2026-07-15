@@ -1,0 +1,175 @@
+import 'package:flutter/material.dart';
+class SignupPage2 extends StatelessWidget {
+  const SignupPage2({super.key});
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+    
+         body: SafeArea(child:SingleChildScrollView(
+
+        child: SizedBox(
+          width: 1400,
+          height: 800,
+          child: Stack(
+            children: [
+              Container( 
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/image1.png"), 
+            fit: BoxFit.cover, ), // DecorationImage
+        ), ), SizedBox(height: 25),
+         Container(padding: EdgeInsets.all(10),
+         width: 1000,
+        child: 
+        
+          Column(
+            children: [
+              Container(
+                child:Text('WELCOME',style: TextStyle(fontWeight: FontWeight.bold),) ),
+              Column(
+                mainAxisAlignment:MainAxisAlignment.start,
+               children: [
+                Container(width: 400,child: 
+                 Column(
+                  children: [Padding(padding: EdgeInsets.all(10),),
+                    Container(
+                    decoration: BoxDecoration(
+                  color: Colors.white,
+                  border: Border.all(color: Colors.grey),
+                  borderRadius: BorderRadius.circular(8),
+                ),child:
+                    ListTile(
+                      leading: const Icon(Icons.person, color: Colors.grey),
+                      title: TextField(
+                        decoration: const InputDecoration(
+                          hintText: "Full Name",
+                        ),
+                      ),
+                    ),),
+                    SizedBox(height: 12),    
+                    Container(decoration: BoxDecoration(
+                  color: Colors.white,
+                  border: Border.all(color: Colors.grey),
+                  borderRadius: BorderRadius.circular(8),
+                ),child: 
+                    ListTile(
+                      leading: const Icon(Icons.account_box, color: Colors.grey),
+                      title: TextField(
+                        decoration: const InputDecoration(
+                          hintText: "Username",
+                        ),
+                      ),
+                    ),    ),
+                    SizedBox(height: 12,),   
+                    Container(decoration: BoxDecoration(
+                  color: Colors.white,
+                  border: Border.all(color: Colors.grey),
+                  borderRadius: BorderRadius.circular(8),
+                ),child: 
+                    ListTile(
+                      leading: const Icon(Icons.email, color: Colors.grey),
+                      title: TextField(
+                        decoration: const InputDecoration(
+                          hintText: "Emial",
+                        ),
+                      ),
+                    ), ),
+                    SizedBox(height: 12,),
+                    Container(decoration: BoxDecoration(
+                  color: Colors.white,
+                  border: Border.all(color: Colors.grey),
+                  borderRadius: BorderRadius.circular(8),
+                ),child: 
+                    ListTile(
+                      leading: const Icon(Icons.person, color: Colors.grey),
+                      title: TextField(
+                        decoration: const InputDecoration(
+                          hintText: "Email", 
+                        ),
+                      ),
+                    ),  ),
+                    SizedBox(height: 12,),
+                    Container(decoration: BoxDecoration(
+                  color: Colors.white,
+                  border: Border.all(color: Colors.grey),
+                  borderRadius: BorderRadius.circular(8),
+                ),child: 
+                    ListTile(
+                      leading: const Icon(Icons.phone, color: Colors.grey),
+                      title: TextField(
+                        decoration: const InputDecoration(
+                          hintText: "Contact no", 
+                        ),
+                      ),
+                    ),  ),
+                    SizedBox(height: 12,),
+                    Container(decoration: BoxDecoration(
+                  color: Colors.white,
+                  border: Border.all(color: Colors.grey),
+                  borderRadius: BorderRadius.circular(8),
+                ),child: 
+                    ListTile(
+                      leading: const Icon(Icons.lock, color: Colors.grey),
+                      title: TextField(
+                        decoration: const InputDecoration(
+                          hintText: "Password", 
+                        ),
+                      ),
+                    ),  ),
+                    SizedBox(height: 12,),
+                    SizedBox(
+      width: 29,
+      height: 50,
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.brown,
+          foregroundColor: Colors.white,
+        ),
+        onPressed: () {
+          // Signup Code
+        },
+        child: Text("Sign Up"),
+      ),
+    ),
+
+                    Container(decoration: BoxDecoration(
+                  color: Colors.white,
+                  border: Border.all(color: Colors.grey),
+                  borderRadius: BorderRadius.circular(8),
+                ),child: 
+                    Padding(padding: EdgeInsets.all(20),
+                  child: 
+                Center(child: 
+                  Row(
+  mainAxisAlignment: MainAxisAlignment.center,
+  children: [
+    
+     Text("Already have an account?"),
+    TextButton(
+      onPressed: () {
+        
+      },
+      child: Text(
+        "Login",
+        style: TextStyle(
+          color: Colors.brown,
+          fontWeight: FontWeight.bold,
+        ),
+      ),),
+                   ] ),
+
+),)
+                 
+                 )   ] ),  ),
+              ]),
+          
+        ]  ),
+         ),
+   ]  ), ),),),);
+          
+      
+      
+  }
+}

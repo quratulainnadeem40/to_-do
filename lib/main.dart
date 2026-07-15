@@ -1,6 +1,4 @@
 // import 'package:flutter/material.dart';
-// import 'package:to_do_work/home.dart';
-
 
 // void main(){
 //   runApp(MyApp());
@@ -32,86 +30,80 @@
 
       
     
-// //          body:SafeArea(child: SingleChildScrollView(child:
-// //          Stack(
-// //           children: [
-// //             Container(
-// //               alignment: Alignment.center,
-// //             ),
-// // Image.asset('assets/coffeeshop.jpeg'),
-// // SizedBox(height:1500,width:2000),
-// //           Column(
-// //             mainAxisSize:MainAxisSize.min,
-// //            children: [
-// //             Text('Sign In', style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: Colors.brown),
-// //                       ),
-// //                       SizedBox(height: 20),
-// //              ListTile(
-// //                         leading: Icon(Icons.email, color: Colors.white),
-// //                         title: TextField(
-// //                           decoration: InputDecoration(
-// //                             hintText: "Enter Email",hintStyle: TextStyle( color:Colors.white),
-// //                             border: OutlineInputBorder(borderRadius: BorderRadius.circular(20),
-// //                            ),
-// //                           ),
-// //                         ),
-// //                       ),
-// //                       SizedBox(height: 20),
+//          body:SafeArea(child: SingleChildScrollView(child:
+//          Stack(
+//           children: [
+//             Container(
+//               alignment: Alignment.center,
+//             ),
+// Image.asset('assets/coffeeshop.jpeg'),
+// SizedBox(height:1500,width:2000),
+//           Column(
+//             mainAxisSize:MainAxisSize.min,
+//            children: [
+//             Text('Sign In', style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: Colors.brown),
+//                       ),
+//                       SizedBox(height: 20),
+//              ListTile(
+//                         leading: Icon(Icons.email, color: Colors.white),
+//                         title: TextField(
+//                           decoration: InputDecoration(
+//                             hintText: "Enter Email",hintStyle: TextStyle( color:Colors.white),
+//                             border: OutlineInputBorder(borderRadius: BorderRadius.circular(20),
+//                            ),
+//                           ),
+//                         ),
+//                       ),
+//                       SizedBox(height: 20),
 
-// //                ListTile(
-// //                         leading: Icon(Icons.lock, color: Colors.white),
-// //                         title: TextField(
-// //                           obscureText: true,
-// //                           decoration: InputDecoration(
-// //                             hintText: "Enter Password",
-// //                             hintStyle: TextStyle(color: Colors.white),
-// //                             border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
-// //                           ),
-// //                         ),
-// //                       ),
-// //                       SizedBox(height: 20,),
+//                ListTile(
+//                         leading: Icon(Icons.lock, color: Colors.white),
+//                         title: TextField(
+//                           obscureText: true,
+//                           decoration: InputDecoration(
+//                             hintText: "Enter Password",
+//                             hintStyle: TextStyle(color: Colors.white),
+//                             border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
+//                           ),
+//                         ),
+//                       ),
+//                       SizedBox(height: 20,),
 
-// //   Row(
-// //   mainAxisAlignment: MainAxisAlignment.center, 
-// // // center mein
-// //   children: [
-// //     Container(alignment: Alignment.center,),
+//   Row(
+//   mainAxisAlignment: MainAxisAlignment.center, 
+// // center mein
+//   children: [
+//     Container(alignment: Alignment.center,),
     
-// //     ElevatedButton(
-// //       onPressed: (){
-// //         Navigator.push(
-// //       context,
-// //       MaterialPageRoute(
-// //         builder: (context) => const HomeScreen(),
-// //       ),
-// //     );
-// //       },
-// //       style: ElevatedButton.styleFrom(
-// //         backgroundColor: Colors.white,
-// //         foregroundColor: Colors.white, 
-// //       ),
-// //       child: Text("Login", style: TextStyle(fontSize: 16,color: Colors.brown)),
-// //     ),
-// //     SizedBox(width: 20), 
+//     ElevatedButton(
+//       onPressed: (){
+//       },
+//       style: ElevatedButton.styleFrom(
+//         backgroundColor: Colors.white,
+//         foregroundColor: Colors.white, 
+//       ),
+//       child: Text("Login", style: TextStyle(fontSize: 16,color: Colors.brown)),
+//     ),
+//     SizedBox(width: 20), 
 
     
-// //     ElevatedButton(
-// //       onPressed: () {
-// //       },
-// //       style: ElevatedButton.styleFrom(
-// //         backgroundColor: Colors.white, 
-// //         foregroundColor: Colors.white,
-// //       ),
-// //       child: Text("Forget Password?", style: TextStyle(fontSize: 16,color:Colors.brown),),
-// //     ),
-// //   ],
-// // ),
+//     ElevatedButton(
+//       onPressed: () {
+//       },
+//       style: ElevatedButton.styleFrom(
+//         backgroundColor: Colors.white, 
+//         foregroundColor: Colors.white,
+//       ),
+//       child: Text("Forget Password?", style: TextStyle(fontSize: 16,color:Colors.brown),),
+//     ),
+//   ],
+// ),
      
-// // Row(
-// //   mainAxisAlignment: MainAxisAlignment.center,
-// //   children: [
-// //     Container(alignment: Alignment.center,),
-// //     Text(
+// Row(
+//   mainAxisAlignment: MainAxisAlignment.center,
+//   children: [
+//     Container(alignment: Alignment.center,),
+//     Text(
 //       "Don't have an account? ", 
 //       style: TextStyle(color: Colors.black, fontSize: 16,
 //       fontWeight: FontWeight.bold),
@@ -130,8 +122,11 @@
 //   ],
 // )
 //            ],
-//   
-//        )]}}
+//           )]) ))
+//       ),
+//     );
+//   }
+// }
 import 'package:flutter/material.dart';
 import 'package:to_do_work/homescreen.dart';
 
@@ -147,7 +142,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Homescreen(),
+      home: HomeScreen(),
     );
   }
-}
+ }
