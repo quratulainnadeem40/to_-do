@@ -5,6 +5,7 @@ class Myapp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+  
       body: SafeArea(
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
@@ -14,7 +15,7 @@ class Myapp extends StatelessWidget {
               width: 300,
               margin: EdgeInsets.all(10),
               decoration: BoxDecoration(
-                color: Colors.blue.shade300,
+                color: Colors.indigo.shade400,
                 borderRadius: BorderRadius.circular(12),
               ),
                 child: Padding(
@@ -40,7 +41,29 @@ class Myapp extends StatelessWidget {
                             ],
                           ),
                           Spacer(),
-                          Icon(Icons.notification_add),
+                  //  ElevatedButton(onPressed: (){
+                  //                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Data Saved Successfully!'),
+                  //                          action: SnackBarAction(label: 'UNDO', onPressed: (){
+                  //                           //undo action
+                  //                          }),
+                  //                          duration: Duration(seconds: 3),
+                  //                          backgroundColor: Colors.green,));
+                  //     }, child: Text('save')),
+                        
+                          IconButton(
+                            icon: Icon(Icons.notification_add, color: Colors.white),
+                            onPressed: (){
+showDialog(context: context, builder: (context){
+  return AlertDialog(
+    title: Text("Notification"),content: Text("You have 3 pending tasks."),
+    actions: [
+      TextButton(onPressed:() =>  Navigator.pop(context),
+              child: Text("OK"),),
+    ],
+  );
+
+} ,);
+                          }, ),
                         ],
                       ),
                       SizedBox(height: 20,child:Center( child: 
@@ -82,6 +105,15 @@ class Myapp extends StatelessWidget {
                       SizedBox(height: 20),
                       Text("Incomplete Tasks"),
                       Expanded(
+                      //   child:
+                      //   ElevatedButton(onPressed: (){
+                      //                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Data Saved Successfully!'),
+                      //                      action: SnackBarAction(label: 'UNDO', onPressed: (){
+                      //                       //undo action
+                      //                      }),
+                      //                      duration: Duration(seconds: 3),
+                      //                      backgroundColor: Colors.green,));
+                      // }, 
                         child: ListView.builder(
                           itemCount: 4,
                           itemBuilder: (context, index) {
@@ -92,7 +124,16 @@ class Myapp extends StatelessWidget {
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(15),
                               ),
-                              child: ListTile(
+                              child: 
+                              ElevatedButton(onPressed: (){
+                                           ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Short message at bottom,\nBig impact on user experience.",style: TextStyle(fontSize: 18),),
+                                           action: SnackBarAction(label: 'UNDO',
+                                            onPressed: (){
+                                            //undo action
+                                           }),
+                                           duration: Duration(seconds: 3),
+                                           backgroundColor: Colors.indigo,));
+                      }, child: ListTile(
                                 leading: const CircleAvatar(
                                   child: Icon(Icons.person),
                                 ),
@@ -100,7 +141,7 @@ class Myapp extends StatelessWidget {
                                 subtitle: const Text("Pending Task"),
                                 trailing: const Icon(Icons.arrow_forward_ios),
                               ),
-                            );
+                              ),  );
                           },
                         ),
                       ),

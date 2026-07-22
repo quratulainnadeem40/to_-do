@@ -45,7 +45,6 @@
 // }
 
 import 'package:flutter/material.dart';
-import 'package:to_do_work/main.dart';
 import 'package:to_do_work/myapp.dart';
 
 class Mypage extends StatelessWidget {
