@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:to_do_work/homepage.dart';
+
 class SignupPage2 extends StatelessWidget {
   const SignupPage2({super.key});
 
@@ -62,20 +64,6 @@ class SignupPage2 extends StatelessWidget {
                         ),
                       ),
                     ),    ),
-                    SizedBox(height: 12,),   
-                    Container(decoration: BoxDecoration(
-                  color: Colors.white,
-                  border: Border.all(color: Colors.grey),
-                  borderRadius: BorderRadius.circular(8),
-                ),child: 
-                    ListTile(
-                      leading: const Icon(Icons.email, color: Colors.grey),
-                      title: TextField(
-                        decoration: const InputDecoration(
-                          hintText: "Emial",
-                        ),
-                      ),
-                    ), ),
                     SizedBox(height: 12,),
                     Container(decoration: BoxDecoration(
                   color: Colors.white,
@@ -110,18 +98,32 @@ class SignupPage2 extends StatelessWidget {
                   border: Border.all(color: Colors.grey),
                   borderRadius: BorderRadius.circular(8),
                 ),child: 
+                ListTile(
+                      leading: const Icon(Icons.lock, color: Colors.grey),
+                      title: TextField(
+                        decoration: const InputDecoration(
+                          hintText: "Password",
+                        ),
+                      ),
+                    ), ),
+                    SizedBox(height: 12,),Container(decoration: BoxDecoration(
+                  color: Colors.white,
+                  border: Border.all(color: Colors.grey),
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: 
                     ListTile(
                       leading: const Icon(Icons.lock, color: Colors.grey),
                       title: TextField(
                         decoration: const InputDecoration(
-                          hintText: "Password", 
+                          hintText: " Confirm Password", 
                         ),
                       ),
                     ),  ),
                     SizedBox(height: 12,),
+                    
                     SizedBox(
-      width: 29,
-      height: 50,
+      height: 40,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.brown,
@@ -134,11 +136,7 @@ class SignupPage2 extends StatelessWidget {
       ),
     ),
 
-                    Container(decoration: BoxDecoration(
-                  color: Colors.white,
-                  border: Border.all(color: Colors.grey),
-                  borderRadius: BorderRadius.circular(8),
-                ),child: 
+                
                     Padding(padding: EdgeInsets.all(20),
                   child: 
                 Center(child: 
@@ -149,7 +147,12 @@ class SignupPage2 extends StatelessWidget {
      Text("Already have an account?"),
     TextButton(
       onPressed: () {
-        
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => HomePage(),
+          ),
+        );
       },
       child: Text(
         "Login",
@@ -160,14 +163,14 @@ class SignupPage2 extends StatelessWidget {
       ),),
                    ] ),
 
-),)
+),),
                  
-                 )   ] ),  ),
+             ] )   ), ] ),
               ]),
           
-        ]  ),
          ),
-   ]  ), ),),),);
+        ] ),
+    ), ),),);
           
       
       

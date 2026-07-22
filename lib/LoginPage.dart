@@ -22,7 +22,7 @@ class LoginPage extends StatelessWidget {
         ), ), SizedBox(height: 25),
          Container(padding: EdgeInsets.all(10),
          width: 1000,
-        child: 
+        child:
         
           Column(
             children: [

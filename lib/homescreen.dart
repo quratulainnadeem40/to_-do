@@ -79,21 +79,20 @@ class HomeScreen extends StatelessWidget {
             image: AssetImage("assets/image.png"), 
             fit: BoxFit.cover, ), // DecorationImage
         ), ), SizedBox(height: 25),
-// CONTINUE BUTTON - Right wale box ke neeche center
+
 Positioned(
-  right: 85,        // box jahan hai usi line me
-  bottom: 85,       // neeche se thora upar
-  width: 300,       // box ki width ke barabar
+  right: 85,       
+  bottom: 85,       
+  width: 300,       
   child: Center(
     child: ElevatedButton(
       style: ElevatedButton.styleFrom(
         backgroundColor: Colors.black, // image me black button hai
         
-          
         
       ),
       onPressed: () {
-        // Yahan next page pe jao
+    
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => LoginPage()),
