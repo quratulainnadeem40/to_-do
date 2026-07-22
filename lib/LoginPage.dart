@@ -31,7 +31,7 @@ class LoginPage extends StatelessWidget {
               Column(
                 mainAxisAlignment:MainAxisAlignment.start,
                children: [
-                Container(width: 400,child: 
+                SizedBox(width: 400,child: 
                  Column(
                   children: [Padding(padding: EdgeInsets.all(10),),
                     Container(
@@ -113,7 +113,7 @@ SizedBox(
       foregroundColor: Colors.white,
     ),
     onPressed: () {
-      // Home Page
+    
     },
     child: Text("Login"),
   ),
@@ -121,7 +121,6 @@ SizedBox(
 
 SizedBox(height: 20),
 
-// Create Account
 Row(
   mainAxisAlignment: MainAxisAlignment.center,
   children: [

@@ -17,11 +17,11 @@ class SignupPage2 extends StatelessWidget {
           child: Stack(
             children: [
               Container( 
-        decoration: BoxDecoration(
+ decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage("assets/image1.png"), 
             fit: BoxFit.cover, ), // DecorationImage
-        ), ), SizedBox(height: 25),
+        ), ), SizedBox(height: 25),       
          Container(padding: EdgeInsets.all(10),
          width: 1000,
         child: 
@@ -33,7 +33,7 @@ class SignupPage2 extends StatelessWidget {
               Column(
                 mainAxisAlignment:MainAxisAlignment.start,
                children: [
-                Container(width: 400,child: 
+                SizedBox(width: 400,child: 
                  Column(
                   children: [Padding(padding: EdgeInsets.all(10),),
                     Container(
